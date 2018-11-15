@@ -10,12 +10,12 @@ Then run: `gradlew build` on linux or `gradlew.bat build` on windows.
 
 ## Launch
 
-Just run Then run: `gradlew run` on linux or `gradlew.bat run` on windows.
+To run the bot: `gradlew run` on linux or `gradlew.bat run` on windows.
 Don't forget to fill your bot token on Main.java.
 
 ## Deployment
 
-[dialog.conf](dialog.conf) contain endpoint and host info:
+[dialog.conf](dialog.conf) contains endpoint and host info:
 
 ```
 dialog.botsdk {
@@ -24,6 +24,7 @@ dialog.botsdk {
   fork-join-pool.parallelism = 16
 }
 ```
+
 
 ## Built With
 
