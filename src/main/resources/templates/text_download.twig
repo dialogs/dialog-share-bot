@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: RoyalBlue;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+<h2>File content:</h2>
+<p id="content"></p>
+
+<h2>{{ sharebot_name }} download links</h2>
+<a href="{{url}}" download>
+<button class="btn"><i class="fa fa-download"></i> Download</button>
+</a>
+
+<script>
+$(document).ready(function(){
+        $("#content").load("{{url}}");
+});
+</script>
+</body>
+</html>
+
+
+

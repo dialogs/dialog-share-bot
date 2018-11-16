@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="{{ language }}">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>"{{ title }}"</title>
+    <meta name="description" content="Share Bot Tweet" />
+    <meta name="author" content="{{ sharebot_name }}" />
+    <script type="text/javascript">
+    function load()
+    {
+        var link = "mailto:me@example.com"
+             + "?cc=myCCaddress@example.com"
+             + "&subject=" + escape("{{ subject }}")
+             + "&body="    + escape("{{ body }}");
+             window.location.href = link;   
+    }
+    </script>
+  </head>
+  <body onload="load()">
+
+  <h1 onclick="load()">
+  SEND EMAIL
+  </h1>
+
+  </body>
+</html>

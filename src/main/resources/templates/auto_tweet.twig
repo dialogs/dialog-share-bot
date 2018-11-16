@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="{{ language }}">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>"{{ title }}"</title>
+    <meta name="description" content="Share Bot Tweet" />
+    <meta name="author" content="{{ sharebot_name}}" />
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0" />
+    <script type="text/javascript">
+    function load()
+    {
+      var twitter_intent = "https://twitter.com/intent/tweet";
+      var url = "{{ url }}";
+      var text = "{{ text }}";
+      var via = "{{ sharebot_name }}";
+      
+
+      window.location.href = twitter_intent + "?url=" + url
+                              + "&text=" + text 
+                              + "&via=" + via "&";
+    }
+    </script>
+  </head>
+  <body onload="load()">
+    <a class="twitter-share-button"
+        href="https://twitter.com/intent/tweet"
+        data-size="large"
+        data-text="custom share text"
+        data-url="https://dev.twitter.com/web/tweet-button"
+        data-hashtags="example,demo"
+        data-via="twitterdev"
+        data-related="twitterapi,twitter" onclick=>Tweet
+    </a>
+  </body>
+</html>
